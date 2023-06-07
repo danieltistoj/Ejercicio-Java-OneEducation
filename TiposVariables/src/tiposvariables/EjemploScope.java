@@ -9,7 +9,7 @@ package tiposvariables;
  *
  * @author Usuario
  */
-public class condicionales2 {
+public class EjemploScope {
 
     /**
      * @param args the command line arguments
@@ -18,7 +18,7 @@ public class condicionales2 {
         int edad = 21;
         int cantidadPersonas = 2;
         //boolean esPareja = cantidadPersonas>1;
-        boolean puedeEntrar = edad>=18 && cantidadPersonas>1;
+        boolean puedeEntrar = edad >= 18 && cantidadPersonas > 1;
         if (puedeEntrar) {
             System.out.println("Usted puede entrar");
         } else {
