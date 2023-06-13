@@ -18,7 +18,7 @@ public class PruebaAcceso {
        Cuenta cuenta = new Cuenta();
        cuenta.depositar(400);
        cuenta.retirar(300);
-        System.out.println(cuenta.obtenerSaldo());
+        System.out.println(cuenta.getSaldo());
     }
     
 }

@@ -18,9 +18,9 @@ public class PruebaMetodo {
         Cuenta miCuenta = new Cuenta();
         miCuenta.depositar(300); 
         miCuenta.depositar(200);
-        System.out.println(miCuenta.obtenerSaldo());
+        System.out.println(miCuenta.getSaldo());
         miCuenta.retirar(100);
-        System.out.println(miCuenta.obtenerSaldo());
+        System.out.println(miCuenta.getSaldo());
         
         Cuenta cuentaJimena = new Cuenta();
         cuentaJimena.depositar(1000);
@@ -28,8 +28,8 @@ public class PruebaMetodo {
         if(cuentaJimena.transfereir(400, miCuenta)){
             System.out.println("Transferencia exitosa");
         }
-        System.out.println(miCuenta.obtenerSaldo());
-        System.out.println(cuentaJimena.obtenerSaldo());
+        System.out.println(miCuenta.getSaldo());
+        System.out.println(cuentaJimena.getSaldo());
     }
     
 }
