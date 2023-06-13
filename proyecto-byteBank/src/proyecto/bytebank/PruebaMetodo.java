@@ -16,11 +16,11 @@ public class PruebaMetodo {
      */
     public static void main(String[] args) {
         Cuenta miCuenta = new Cuenta();
-        miCuenta.saldo = 300;
+        miCuenta.depositar(300); 
         miCuenta.depositar(200);
-        System.out.println(miCuenta.saldo);
+        System.out.println(miCuenta.obtenerSaldo());
         miCuenta.retirar(100);
-        System.out.println(miCuenta.saldo);
+        System.out.println(miCuenta.obtenerSaldo());
         
         Cuenta cuentaJimena = new Cuenta();
         cuentaJimena.depositar(1000);
@@ -28,8 +28,8 @@ public class PruebaMetodo {
         if(cuentaJimena.transfereir(400, miCuenta)){
             System.out.println("Transferencia exitosa");
         }
-        System.out.println(miCuenta.saldo);
-        System.out.println(cuentaJimena.saldo);
+        System.out.println(miCuenta.obtenerSaldo());
+        System.out.println(cuentaJimena.obtenerSaldo());
     }
     
 }

@@ -34,4 +34,7 @@ public class Cuenta {
         return false;
         
     }
+    public double obtenerSaldo(){
+        return this.saldo;
+    }
 }

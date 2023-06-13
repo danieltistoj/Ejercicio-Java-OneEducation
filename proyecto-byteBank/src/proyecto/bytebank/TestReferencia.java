@@ -16,19 +16,19 @@ public class TestReferencia {
      */
     public static void main(String[] args) {
         Cuenta primeraCuenta = new Cuenta();
-        primeraCuenta.saldo = 200;
+        primeraCuenta.depositar(200); 
         //al hacer esto ambos objetos apuntan a la misma direccion en memoria
         //Cuenta seguntaCuenta = primeraCuenta;
         Cuenta seguntaCuenta = new Cuenta();
-        seguntaCuenta.saldo = 100;
-        System.out.println("Saldo primera cuenta: " + primeraCuenta.saldo);
-        System.out.println("Saldo segunda Cuenta: " + seguntaCuenta.saldo);
-        seguntaCuenta.saldo+=400;
+        seguntaCuenta.depositar(100);
+        System.out.println("Saldo primera cuenta: " + primeraCuenta.obtenerSaldo());
+        System.out.println("Saldo segunda Cuenta: " + seguntaCuenta.obtenerSaldo());
+        seguntaCuenta.depositar(400);
         
         System.out.println();
         
-        System.out.println("Saldo primera cuenta: " + primeraCuenta.saldo);
-        System.out.println("Saldo segunda Cuenta: " + seguntaCuenta.saldo);
+        System.out.println("Saldo primera cuenta: " + primeraCuenta.obtenerSaldo());
+        System.out.println("Saldo segunda Cuenta: " + seguntaCuenta.obtenerSaldo());
         
         System.out.println(primeraCuenta);
         System.out.println(seguntaCuenta);
