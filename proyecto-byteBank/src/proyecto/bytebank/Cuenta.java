@@ -10,10 +10,10 @@ package proyecto.bytebank;
  * @author Usuario
  */
 public class Cuenta {
-    double saldo;
+    private double saldo;
     int agencia;
     int numero;
-    String titulas;
+    Cliente titular;
     void depositar(double valor){
         this.saldo+=valor;
     }
