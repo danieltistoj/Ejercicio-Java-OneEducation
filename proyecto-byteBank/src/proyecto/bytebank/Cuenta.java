@@ -13,9 +13,22 @@ public class Cuenta {
     private double saldo;
     private int agencia;
     private int numero;
+    private static int total = 0;
     Cliente titular;
     void depositar(double valor){
         this.saldo+=valor;
+    }
+
+    public Cuenta(int agencia) {
+        if(agencia<=0){
+            System.out.println("no se permite 0 o menor a 0");
+            this.agencia = 1;
+        }else{
+            this.agencia = agencia;
+        }
+        total++;
+        System.out.println("num cuenta: "+total);
+        System.out.println("aqui se crea una misma cuenta");
     }
     public boolean retirar(double valor){
         if(this.saldo>= valor){
@@ -42,14 +55,6 @@ public class Cuenta {
         return agencia;
     }
 
-    public void setAgencia(int agencia) {
-        if(agencia>0){
-         this.agencia = agencia;   
-        }else{
-            System.out.println("no estan permitidos valores negativos");
-        }
-    }
-
     public int getNumero() {
         return numero;
     }
@@ -65,5 +70,8 @@ public class Cuenta {
     public void setTitular(Cliente titular) {
         this.titular = titular;
     }
-    
+    public static int getTotal(){
+        //total es de la clase no de una instancia
+        return Cuenta.total;
+    }
 }
