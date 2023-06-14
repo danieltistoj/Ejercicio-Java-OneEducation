@@ -16,14 +16,14 @@ public class TestReferencia2 {
      */
     public static void main(String[] args) {
        Cliente diego = new Cliente();
-       diego.nombre = "diego";
-       diego.documento = "455667";
-       diego.telefono = "234324243";
+       diego.setNombre("diego"); 
+       diego.setDocumento("455667"); 
+       diego.setTelefono("234324243"); 
        
-       Cuenta cuentaDiego = new Cuenta();
-       cuentaDiego.agencia = 1;
-       cuentaDiego.titular = diego;
-        System.out.println(cuentaDiego.titular.documento);
+       Cuenta cuentaDiego = new Cuenta(1);
+      
+        cuentaDiego.titular = diego;
+        System.out.println(cuentaDiego.titular.getDocumento());
         System.out.println(cuentaDiego.titular);
         System.out.println(diego);
     }

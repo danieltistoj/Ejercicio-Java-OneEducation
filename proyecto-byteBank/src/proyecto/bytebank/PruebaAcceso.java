@@ -15,9 +15,9 @@ public class PruebaAcceso {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       Cuenta cuenta = new Cuenta();
+       Cuenta cuenta = new Cuenta(1);
        cuenta.depositar(400);
-       cuenta.setAgencia(-22);
+
        cuenta.retirar(300);
         System.out.println(cuenta.getSaldo());
         System.out.println(cuenta.getAgencia());

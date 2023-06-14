@@ -15,14 +15,14 @@ public class PruebaMetodo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Cuenta miCuenta = new Cuenta();
+        Cuenta miCuenta = new Cuenta(1);
         miCuenta.depositar(300); 
         miCuenta.depositar(200);
         System.out.println(miCuenta.getSaldo());
         miCuenta.retirar(100);
         System.out.println(miCuenta.getSaldo());
         
-        Cuenta cuentaJimena = new Cuenta();
+        Cuenta cuentaJimena = new Cuenta(1);
         cuentaJimena.depositar(1000);
     
         if(cuentaJimena.transfereir(400, miCuenta)){

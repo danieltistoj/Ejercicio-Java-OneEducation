@@ -15,10 +15,10 @@ public class TestReferencia3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       Cuenta cuentaDiego = new Cuenta();
+       Cuenta cuentaDiego = new Cuenta(1);
        cuentaDiego.titular = new Cliente();
-       cuentaDiego.titular.nombre = "diego";
-        System.out.println(cuentaDiego.titular.nombre);
+       cuentaDiego.titular.setNombre("diego");
+        System.out.println(cuentaDiego.titular.getNombre());
     }
     
 }

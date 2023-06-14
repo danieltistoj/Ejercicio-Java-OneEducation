@@ -15,11 +15,11 @@ public class TestReferencia {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Cuenta primeraCuenta = new Cuenta();
+        Cuenta primeraCuenta = new Cuenta(1);
         primeraCuenta.depositar(200); 
         //al hacer esto ambos objetos apuntan a la misma direccion en memoria
         //Cuenta seguntaCuenta = primeraCuenta;
-        Cuenta seguntaCuenta = new Cuenta();
+        Cuenta seguntaCuenta = new Cuenta(1);
         seguntaCuenta.depositar(100);
         System.out.println("Saldo primera cuenta: " + primeraCuenta.getSaldo());
         System.out.println("Saldo segunda Cuenta: " + seguntaCuenta.getSaldo());
