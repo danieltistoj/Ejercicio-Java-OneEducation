@@ -19,4 +19,8 @@ public class Gerente extends Funcionario{
         return clave == this.clave;
                 
     }
+    //sobre escritura de metodo
+    public double getBonificacion(){
+        return super.getSalario() + (super.getBonificacion());
+    }
 }

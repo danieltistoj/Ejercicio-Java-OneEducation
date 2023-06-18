@@ -9,18 +9,13 @@ package byteback.heradado;
  *
  * @author Usuario
  */
-public class ByteBackHeradado {
+public class TestReferencias {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Funcionario diego = new Funcionario();
-        diego.setNombre("Diego");
-        diego.setDocumentoIdentidad("343534534");
-        diego.setSalario(2000);
-        System.out.println(diego.getSalario());
-        System.out.println(diego.getBonificacion());
+        // TODO code application logic here
     }
     
 }
