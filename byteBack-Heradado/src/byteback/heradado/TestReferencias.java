@@ -15,7 +15,12 @@ public class TestReferencias {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       Funcionario funcionario = new Funcionario();
+       funcionario.setNombre("Diego");
+       Gerente gerente = new Gerente();
+       gerente.setNombre("Jimena");
+       funcionario.setSalario(2000);
+       gerente.setSalario(10000);
     }
     
 }
