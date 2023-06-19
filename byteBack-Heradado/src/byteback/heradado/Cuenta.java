@@ -9,16 +9,13 @@ package byteback.heradado;
  *
  * @author Usuario
  */
-public class Cuenta {
-    private double saldo;
+public abstract class Cuenta {
+    protected double saldo;
     private int agencia;
     private int numero;
     private static int total = 0;
     Cliente titular;
-    void depositar(double valor){
-        this.saldo+=valor;
-    }
-
+    abstract   void depositar(double valor);
     public Cuenta(int agencia, int numero) {
         if(agencia<=0){
             System.out.println("no se permite 0 o menor a 0");

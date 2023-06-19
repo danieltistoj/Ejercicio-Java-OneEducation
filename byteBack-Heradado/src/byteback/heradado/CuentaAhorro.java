@@ -14,5 +14,10 @@ public class CuentaAhorro extends Cuenta{
     public CuentaAhorro(int agencia, int numero) {
         super(agencia, numero);
     }
+
+    @Override
+    void depositar(double valor) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

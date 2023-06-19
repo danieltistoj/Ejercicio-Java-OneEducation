@@ -23,7 +23,10 @@ public class CuentaCorriente  extends Cuenta {
         return super.retirar(valor + comision); //To change body of generated methods, choose Tools | Templates.
     }
 
-    
-    
+    @Override
+    void depositar(double valor) {
+        this.saldo+=valor;
+    }
+     
     
 }
