@@ -9,18 +9,19 @@ package byteback.heradado;
  *
  * @author Usuario
  */
-public class TestReferencias {
+public class TestCuenta {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       Funcionario funcionario = new Contador();
-       funcionario.setNombre("Diego");
-       Gerente gerente = new Gerente();
-       gerente.setNombre("Jimena");
-       funcionario.setSalario(2000);
-       gerente.setSalario(10000);
+        CuentaCorriente cc = new CuentaCorriente(1, 1);
+        CuentaAhorro ca  = new CuentaAhorro(2, 3);
+        cc.depositar(2000);
+        cc.transfereir(1000, ca);
+        System.out.println(cc.getSaldo());
+        System.out.println(ca.getSaldo());
+        
     }
     
 }

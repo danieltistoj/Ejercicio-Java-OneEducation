@@ -9,7 +9,7 @@ package byteback.heradado;
  *
  * @author Usuario
  */
-public class Funcionario {
+public abstract class Funcionario {
     private String nombre, documentoIdentidad;
     private double salario;
     private int tipo;
@@ -39,9 +39,7 @@ public class Funcionario {
     public void setSalario(double salario) {
         this.salario = salario;
     }
-    public double getBonificacion(){
-        return this.salario*0.05;
-    }
+    public abstract double getBonificacion();
 
     
 }

@@ -15,7 +15,7 @@ public class ByteBackHeradado {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Funcionario diego = new Funcionario();
+        Funcionario diego = new Contador();
         diego.setNombre("Diego");
         diego.setDocumentoIdentidad("343534534");
         diego.setSalario(2000);
