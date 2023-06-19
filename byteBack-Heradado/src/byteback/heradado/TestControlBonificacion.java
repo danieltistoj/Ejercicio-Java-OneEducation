@@ -26,6 +26,8 @@ public class TestControlBonificacion {
         controlBonificacion.registrarSalario(jimena);
         controlBonificacion.registrarSalario(alexis);
         
+        System.out.println("Suma de bonificaciones: "+controlBonificacion.getSuma());
+        
     }
     
 }

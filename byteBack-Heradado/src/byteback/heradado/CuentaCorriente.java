@@ -5,16 +5,16 @@
  */
 package byteback.heradado;
 
+
+
 /**
  *
  * @author Usuario
  */
-public class Contador extends Funcionario{
+public class CuentaCorriente  extends Cuenta {
 
-    @Override
-    public double getBonificacion() {
-        System.out.println("Ejecuntado desde contador");
-        return 200; //To change body of generated methods, choose Tools | Templates.
+    public CuentaCorriente(int agencia, int numero) {
+        super(agencia, numero);
     }
     
 }
