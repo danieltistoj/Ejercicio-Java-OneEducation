@@ -9,7 +9,7 @@ package byteback.heradado;
  *
  * @author Usuario
  */
-public class Gerente extends FuncionarioAutenticable{
+public class Gerente extends Funcionario  implements Autenticable{
 
     //sobre escritura de metodo
 
@@ -21,5 +21,15 @@ public class Gerente extends FuncionarioAutenticable{
     public double getBonificacion(){
         System.out.println("Ejecutando desde gerente");
         return super.getSalario() + (this.getSalario()*0.05 );
+    }
+
+    @Override
+    public void setClave(String clave) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean iniciarSesion(String clave) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

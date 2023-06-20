@@ -15,7 +15,12 @@ public class TestSistemaInterno {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       SistemaInterno sistemaInterno = new SistemaInterno();
+       Gerente gerente = new Gerente();
+       Administrador administrador = new Administrador();
+       
+       sistemaInterno.autentica(gerente);
+       sistemaInterno.autentica(administrador);
     }
     
 }

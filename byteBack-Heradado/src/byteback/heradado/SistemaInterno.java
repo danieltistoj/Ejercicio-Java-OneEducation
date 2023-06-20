@@ -11,8 +11,9 @@ package byteback.heradado;
  */
 public class SistemaInterno {
     private String clave = "12345";
-    public boolean autentica(Gerente gerente){
-        boolean IniciarSesion = gerente.iniciarSesion(clave);
+    //todo lo que este con la categoria de autenticable puede ser pasable como parametro
+    public boolean autentica(Autenticable funcionario){
+        boolean IniciarSesion = funcionario.iniciarSesion(clave);
         if(IniciarSesion){
             System.out.println("Login exitoso");
             return true;

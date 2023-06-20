@@ -9,7 +9,17 @@ package byteback.heradado;
  *
  * @author Usuario
  */
-public class Administrador extends FuncionarioAutenticable {
+public class Administrador extends Funcionario implements Autenticable{
+
+    @Override
+    public void setClave(String clave) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean iniciarSesion(String clave) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     @Override
     public double getBonificacion() {

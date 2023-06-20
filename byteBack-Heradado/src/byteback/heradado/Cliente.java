@@ -9,7 +9,7 @@ package byteback.heradado;
  *
  * @author Usuario
  */
-public class Cliente {
+public class Cliente implements Autenticable{
    private String documento,nombre,telefono;
 
     public String getDocumento() {
@@ -34,6 +34,16 @@ public class Cliente {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+
+    @Override
+    public void setClave(String clave) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean iniciarSesion(String clave) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
