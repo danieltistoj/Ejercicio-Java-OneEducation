@@ -9,16 +9,8 @@ package byteback.heradado;
  *
  * @author Usuario
  */
-public class Gerente extends Funcionario{
-    private String clave;
+public class Gerente extends FuncionarioAutenticable{
 
-    public void setClave(String clave) {
-        this.clave = clave;
-    }
-    public boolean iniciarSesion(String clave){
-        return clave == this.clave;
-                
-    }
     //sobre escritura de metodo
 
     /**
