@@ -10,20 +10,25 @@ package byteback.heradado;
  * @author Usuario
  */
 public class Administrador extends Funcionario implements Autenticable{
+    private AutenticacionUtil util;
 
+    public Administrador() {
+        this.util  = new AutenticacionUtil();
+    }
+    
     @Override
     public void setClave(String clave) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+      this.util.setClave(clave);
     }
 
     @Override
     public boolean iniciarSesion(String clave) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.util.IniciarSesion(clave);
     }
 
     @Override
     public double getBonificacion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.getSalario();
     }
     
 }

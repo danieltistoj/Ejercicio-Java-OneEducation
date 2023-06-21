@@ -11,7 +11,13 @@ package byteback.heradado;
  */
 public class Cliente implements Autenticable{
    private String documento,nombre,telefono;
+   private String clave;
+   private AutenticacionUtil util;
 
+    public Cliente() {
+        this.util = new AutenticacionUtil();
+    }
+   
     public String getDocumento() {
         return documento;
     }
@@ -38,12 +44,12 @@ public class Cliente implements Autenticable{
 
     @Override
     public void setClave(String clave) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.clave = clave;
     }
 
     @Override
     public boolean iniciarSesion(String clave) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.util.IniciarSesion(clave);
     }
     
 }
