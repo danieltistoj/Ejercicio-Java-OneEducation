@@ -27,6 +27,7 @@ public class JavaPilaEjecucion {
 
     public static void metodo2() {
         System.out.println("Inicio metodo 2");
+        /*
         for (int i = 1; i <= 5; i++) {
             System.out.println(i);
             try {
@@ -42,7 +43,10 @@ public class JavaPilaEjecucion {
             }
             //System.out.println(resultado);
         }
-        System.out.println("Fin metodo 2");
+*/
+        
+        throw new ArithmeticException("Surgio un error");
+        //System.out.println("Fin metodo 2");
     }
     
 }

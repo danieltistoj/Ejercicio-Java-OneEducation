@@ -9,6 +9,6 @@ package JavaPilaEjecucion;
  *
  * @author Usuario
  */
-public class Flujo {
+public class Cuenta {
     
 }
