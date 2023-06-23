@@ -29,6 +29,18 @@ public class JavaPilaEjecucion {
         System.out.println("Inicio metodo 2");
         for (int i = 1; i <= 5; i++) {
             System.out.println(i);
+            try {
+                if(i == 3){
+                    int num = 0;
+                    int resultado = i/num;
+                }
+                String test = null;
+                System.out.println(test.toString());
+            } catch (ArithmeticException | NullPointerException e) {
+                System.out.println("Atrapo exception");
+                e.printStackTrace();//imprime toda la pila
+            }
+            //System.out.println(resultado);
         }
         System.out.println("Fin metodo 2");
     }
