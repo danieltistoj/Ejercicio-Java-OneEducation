@@ -21,31 +21,17 @@ public class JavaPilaEjecucion {
     }
     public static void metodo1() {
         System.out.println("Inicio metodo1");
-        metodo2();
+        try {
+            metodo2();
+        } catch (MeException e) {
+            e.printStackTrace();
+        }
         System.out.println("Fin metodo 1");
     }
 
     public static void metodo2() {
         System.out.println("Inicio metodo 2");
-        /*
-        for (int i = 1; i <= 5; i++) {
-            System.out.println(i);
-            try {
-                if(i == 3){
-                    int num = 0;
-                    int resultado = i/num;
-                }
-                String test = null;
-                System.out.println(test.toString());
-            } catch (ArithmeticException | NullPointerException e) {
-                System.out.println("Atrapo exception");
-                e.printStackTrace();//imprime toda la pila
-            }
-            //System.out.println(resultado);
-        }
-*/
-        
-        throw new ArithmeticException("Surgio un error");
+        throw new MeException("Mi excepcion fue lanzada");
         //System.out.println("Fin metodo 2");
     }
     
