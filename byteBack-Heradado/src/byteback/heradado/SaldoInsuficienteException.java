@@ -9,7 +9,7 @@ package byteback.heradado;
  *
  * @author Usuario
  */
-public class SaldoInsuficienteException extends RuntimeException{
+public class SaldoInsuficienteException extends Exception{
 
     public SaldoInsuficienteException(String message) {
         super(message);

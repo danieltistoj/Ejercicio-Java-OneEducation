@@ -5,6 +5,9 @@
  */
 package byteback.heradado;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Usuario
@@ -28,7 +31,7 @@ public abstract class Cuenta {
         System.out.println("num cuenta: "+total);
         System.out.println("aqui se crea una misma cuenta");
     }
-    public void retirar(double valor){
+    public void retirar(double valor) throws SaldoInsuficienteException{
         if(this.saldo < valor){
            throw new SaldoInsuficienteException("No tiene saldo");
         }
@@ -37,6 +40,11 @@ public abstract class Cuenta {
     
     public boolean transfereir(double valor, Cuenta cuenta){
         if(this.saldo >= valor){
+            try {
+                this.retirar(valor);
+            } catch (SaldoInsuficienteException ex) {
+                Logger.getLogger(Cuenta.class.getName()).log(Level.SEVERE, null, ex);
+            }
          cuenta.depositar(valor);  
          return true;
         }

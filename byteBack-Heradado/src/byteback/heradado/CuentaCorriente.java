@@ -18,7 +18,7 @@ public class CuentaCorriente  extends Cuenta implements Tributacion{
     }
 
     @Override
-    public void retirar(double valor) {
+    public void retirar(double valor) throws SaldoInsuficienteException {
         double comision = 0.2;
         super.retirar(valor + comision); //To change body of generated methods, choose Tools | Templates.
     }

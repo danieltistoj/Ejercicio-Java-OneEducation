@@ -21,7 +21,7 @@ public class CuentaAhorro extends Cuenta{
     }
     
     @Override
-    public void retirar(double valor) {
+    public void retirar(double valor) throws SaldoInsuficienteException {
         //double comision = 0.2;
         super.retirar(valor ); //To change body of generated methods, choose Tools | Templates.
     }
