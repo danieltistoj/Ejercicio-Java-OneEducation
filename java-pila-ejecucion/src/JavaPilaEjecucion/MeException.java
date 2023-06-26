@@ -9,7 +9,7 @@ package JavaPilaEjecucion;
  *
  * @author Usuario
  */
-public class MeException extends RuntimeException{
+public class MeException extends Exception{
 
     public MeException() {
         super();

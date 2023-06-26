@@ -17,7 +17,13 @@ public class CuentaAhorro extends Cuenta{
 
     @Override
     void depositar(double valor) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.saldo+=valor;
+    }
+    
+    @Override
+    public void retirar(double valor) {
+        //double comision = 0.2;
+        super.retirar(valor ); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

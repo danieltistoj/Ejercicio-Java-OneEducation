@@ -3,14 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package JavaPilaEjecucion;
+package byteback.heradado;
 
 /**
  *
  * @author Usuario
  */
-public class Cuenta {
-    void deposita() throws MeException{
-        
+public class SaldoInsuficienteException extends RuntimeException{
+
+    public SaldoInsuficienteException(String message) {
+        super(message);
     }
+    
 }

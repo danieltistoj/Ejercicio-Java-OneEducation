@@ -28,17 +28,15 @@ public abstract class Cuenta {
         System.out.println("num cuenta: "+total);
         System.out.println("aqui se crea una misma cuenta");
     }
-    public boolean retirar(double valor){
-        if(this.saldo>= valor){
-            this.saldo -= valor;
-            return true;
+    public void retirar(double valor){
+        if(this.saldo < valor){
+           throw new SaldoInsuficienteException("No tiene saldo");
         }
-        return false;
-   
+        this.saldo-=valor;
     }
     
     public boolean transfereir(double valor, Cuenta cuenta){
-        if(retirar(valor)){
+        if(this.saldo >= valor){
          cuenta.depositar(valor);  
          return true;
         }

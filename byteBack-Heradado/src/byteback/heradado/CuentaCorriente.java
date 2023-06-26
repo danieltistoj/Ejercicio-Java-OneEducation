@@ -18,9 +18,9 @@ public class CuentaCorriente  extends Cuenta implements Tributacion{
     }
 
     @Override
-    public boolean retirar(double valor) {
+    public void retirar(double valor) {
         double comision = 0.2;
-        return super.retirar(valor + comision); //To change body of generated methods, choose Tools | Templates.
+        super.retirar(valor + comision); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override

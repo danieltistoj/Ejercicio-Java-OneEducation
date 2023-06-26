@@ -5,6 +5,9 @@
  */
 package JavaPilaEjecucion;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Usuario
@@ -14,22 +17,22 @@ public class JavaPilaEjecucion {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
         System.out.println("Ini do main");
-        metodo1();
+        try {
+            metodo1();
+        } catch (Exception ex) {
+            Logger.getLogger(JavaPilaEjecucion.class.getName()).log(Level.SEVERE, null, ex);
+        }
         System.out.println("Fim do main");
     }
-    public static void metodo1() {
+    public static void metodo1() throws MeException{
         System.out.println("Inicio metodo1");
-        try {
-            metodo2();
-        } catch (MeException e) {
-            e.printStackTrace();
-        }
+        metodo2();
         System.out.println("Fin metodo 1");
     }
 
-    public static void metodo2() {
+    public static void metodo2() throws MeException{
         System.out.println("Inicio metodo 2");
         throw new MeException("Mi excepcion fue lanzada");
         //System.out.println("Fin metodo 2");
