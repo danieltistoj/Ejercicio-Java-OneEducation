@@ -10,17 +10,26 @@ package JavaPilaEjecucion;
  * @author Usuario
  */
 public class TestConexion {
-    public static void main(String[] args) {
-        Conexion con = new Conexion();
-        try {
+    public static void main(String[] args) throws Exception{
+        try(Conexion con = new Conexion()){
             con.leerDatos();
-        } catch (IllegalStateException e) {
-            System.out.println("Recibiendo exception");
+        }catch(IllegalStateException e){
+            System.out.println("Ejecutando catch");
+            e.printStackTrace();
+        }
+        /*
+        Conexion con = null;
+        try {
+            con = new Conexion();
+            con.leerDatos();
+        }catch(IllegalStateException e){
             e.printStackTrace();
         }finally{
             System.out.println("Ejecutando finally");
             con.cerrar();
         }
+*/
+        
    
     }
 }
