@@ -5,6 +5,8 @@
  */
 package byteback.heradado;
 
+import byteback.heradado.Modelo.Gerente;
+
 /**
  *
  * @author Usuario

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byteback.heradado;
+package byteback.heradado.Modelo;
 
 
 
@@ -24,7 +24,7 @@ public class CuentaCorriente  extends Cuenta implements Tributacion{
     }
 
     @Override
-    void depositar(double valor) {
+    public void depositar(double valor) {
         this.saldo+=valor;
     }
 

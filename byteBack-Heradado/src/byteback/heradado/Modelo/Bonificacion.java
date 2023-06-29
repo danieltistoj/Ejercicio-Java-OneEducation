@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byteback.heradado;
+package byteback.heradado.Modelo;
 
 /**
  *
  * @author Usuario
  */
-public interface Tributacion {
-    double getValorImpuesto();
+public interface Bonificacion {
+    void bonificacion();
 }

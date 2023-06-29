@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byteback.heradado;
+package byteback.heradado.Modelo;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -18,7 +18,7 @@ public abstract class Cuenta {
     private int numero;
     private static int total = 0;
     Cliente titular;
-    abstract   void depositar(double valor);
+    public abstract   void depositar(double valor);
     public Cuenta(int agencia, int numero) {
         if(agencia<=0){
             System.out.println("no se permite 0 o menor a 0");

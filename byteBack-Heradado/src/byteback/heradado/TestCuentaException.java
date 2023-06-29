@@ -5,6 +5,8 @@
  */
 package byteback.heradado;
 
+import byteback.heradado.Modelo.*;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 

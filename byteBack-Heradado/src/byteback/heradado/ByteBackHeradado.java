@@ -5,6 +5,9 @@
  */
 package byteback.heradado;
 
+import byteback.heradado.Modelo.Funcionario;
+import byteback.heradado.Modelo.Contador;
+
 /**
  *
  * @author Usuario
