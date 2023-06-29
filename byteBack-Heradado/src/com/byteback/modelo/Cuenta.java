@@ -9,8 +9,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
- * @author Usuario
+ * Cuenta va a crear nuevas instancias de
+ * Cuenta corriente y cuenta de ahorro
+ * @version 1.0
+ * @author Daniel Tistoj
+ * 
  */
 public abstract class Cuenta {
     protected double saldo;
@@ -19,6 +22,11 @@ public abstract class Cuenta {
     private static int total = 0;
     Cliente titular;
     public abstract   void depositar(double valor);
+    /**
+     * Instancia una nueva cuenta con paramentros
+     * @param agencia
+     * @param numero 
+     */
     public Cuenta(int agencia, int numero) {
         if(agencia<=0){
             System.out.println("no se permite 0 o menor a 0");
@@ -31,6 +39,12 @@ public abstract class Cuenta {
         System.out.println("num cuenta: "+total);
         System.out.println("aqui se crea una misma cuenta");
     }
+    /**
+     * Este metodo retira dinero de la cuenta y si ocurre un error, devuelve 
+     * una excepcion 
+     * @param valor
+     * @throws SaldoInsuficienteException 
+     */
     public void retirar(double valor) throws SaldoInsuficienteException{
         if(this.saldo < valor){
            throw new SaldoInsuficienteException("No tiene saldo");
