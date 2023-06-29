@@ -3,9 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byteback.heradado;
+package com.byteback.test;
 
-import byteback.heradado.Modelo.*;
+import com.byteback.modelo.SaldoInsuficienteException;
+import com.byteback.modelo.CuentaAhorro;
+import com.byteback.modelo.Cuenta;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byteback.heradado;
+package com.byteback.test;
 
-import byteback.heradado.Modelo.Contador;
-import byteback.heradado.Modelo.Gerente;
-import byteback.heradado.Modelo.ControlBonificacion;
-import byteback.heradado.Modelo.Funcionario;
+import com.byteback.modelo.Contador;
+import com.byteback.modelo.Gerente;
+import com.byteback.modelo.ControlBonificacion;
+import com.byteback.modelo.Funcionario;
 
 /**
  *

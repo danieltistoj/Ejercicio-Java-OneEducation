@@ -3,16 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byteback.heradado.Modelo;
+package com.byteback.modelo;
 
 /**
  *
  * @author Usuario
  */
-public  interface Autenticable {
-   
-
-    public void setClave(String clave);
-    public boolean iniciarSesion(String clave);
-
+public interface Tributacion {
+    double getValorImpuesto();
 }

@@ -3,12 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byteback.heradado.Modelo;
+package com.byteback.modelo;
 
 /**
  *
  * @author Usuario
  */
-public interface Tributacion {
-    double getValorImpuesto();
+public class SaldoInsuficienteException extends Exception{
+
+    public SaldoInsuficienteException(String message) {
+        super(message);
+    }
+    
 }

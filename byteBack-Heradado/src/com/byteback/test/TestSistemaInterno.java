@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byteback.heradado;
+package com.byteback.test;
 
-import byteback.heradado.Modelo.Gerente;
-import byteback.heradado.Modelo.SistemaInterno;
-import byteback.heradado.Modelo.Administrador;
+import com.byteback.modelo.Gerente;
+import com.byteback.modelo.SistemaInterno;
+import com.byteback.modelo.Administrador;
 
 /**
  *
