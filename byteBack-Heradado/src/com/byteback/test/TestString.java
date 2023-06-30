@@ -21,8 +21,15 @@ public class TestString {
         nombre = nombre.replace("A", "a");
         System.out.println("Despues de replace: " + nombre);
         nombre = nombre.concat(" cursos online");
-        System.out.println("Despues de concat: "+nombre);      
-      
+        System.out.println("Despues de concat: "+nombre); 
+        nombre = nombre.toUpperCase();
+        System.out.println("Convertir a mayusculas: "+nombre);
+        nombre = nombre.toLowerCase();
+        System.out.println("Convertir todo a minusculas: "+nombre);
+        char letra = nombre.charAt(3);
+        System.out.println("Caracter: "+letra);
+        int index = nombre.indexOf("e");
+        System.out.println("Retorna una posicion: "+index);
                
     }
     
