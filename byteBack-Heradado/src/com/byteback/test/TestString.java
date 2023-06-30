@@ -5,6 +5,8 @@
  */
 package com.byteback.test;
 
+import java.util.function.ObjDoubleConsumer;
+
 /**
  *
  * @author Usuario
@@ -35,6 +37,28 @@ public class TestString {
         for (int i = 0; i < nombre.length(); i++) {
             System.out.println(nombre.charAt(i));
         }
+        
+    }
+    /**
+     * Sobre carga de metodo
+     * @param valor 
+     */
+    /*
+    public static void printLine(String valor){
+        System.out.println(valor);
+    }
+    public static void printLine(int valor){
+        System.out.println(valor);
+    }
+*/  
+    /**
+     *Object es la clase padre de todos los tipos de variables o clases, 
+     * pude recibir tanto String, int, char, etc.
+     * 
+     * @param valor 
+     */
+    public static void printLine(Object valor){
+        System.out.println(valor);
     }
     
 }
