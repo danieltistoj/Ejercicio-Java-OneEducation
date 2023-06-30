@@ -30,7 +30,11 @@ public class TestString {
         System.out.println("Caracter: "+letra);
         int index = nombre.indexOf("e");
         System.out.println("Retorna una posicion: "+index);
-               
+        String sub = nombre.substring(1);
+        System.out.println("Sub String: "+sub);
+        for (int i = 0; i < nombre.length(); i++) {
+            System.out.println(nombre.charAt(i));
+        }
     }
     
 }
