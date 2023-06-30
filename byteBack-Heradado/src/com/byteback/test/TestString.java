@@ -5,7 +5,9 @@
  */
 package com.byteback.test;
 
-import java.util.function.ObjDoubleConsumer;
+import com.byteback.modelo.Cuenta;
+import com.byteback.modelo.CuentaAhorro;
+
 
 /**
  *
@@ -37,6 +39,8 @@ public class TestString {
         for (int i = 0; i < nombre.length(); i++) {
             System.out.println(nombre.charAt(i));
         }
+        Cuenta cuenta = new CuentaAhorro(122, 200);
+        
         
     }
     /**
@@ -60,5 +64,9 @@ public class TestString {
     public static void printLine(Object valor){
         System.out.println(valor);
     }
-    
+    @Override
+    public String toString(){
+        return null;
+        
+    }
 }

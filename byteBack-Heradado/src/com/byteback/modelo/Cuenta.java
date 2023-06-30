@@ -36,8 +36,8 @@ public abstract class Cuenta {
         }
         this.numero = numero;
         total++;
-        System.out.println("num cuenta: "+total);
-        System.out.println("aqui se crea una misma cuenta");
+        //System.out.println("num cuenta: "+total);
+        //System.out.println("aqui se crea una misma cuenta");
     }
     /**
      * Este metodo retira dinero de la cuenta y si ocurre un error, devuelve 
@@ -92,4 +92,13 @@ public abstract class Cuenta {
         //total es de la clase no de una instancia
         return Cuenta.total;
     }
+
+    @Override
+    public String toString() {
+        String cuenta = "Numero: "+this.numero+ 
+                        "\n"+ "Agencia: "+this.agencia;
+        return cuenta; //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
 }

@@ -32,6 +32,11 @@ public class CuentaCorriente  extends Cuenta implements Tributacion{
     public double getValorImpuesto() {
         return super.saldo * 0.01;
     }
+
+    @Override
+    public String toString() {
+        return "Cuenta Corriente: \n"+super.toString(); //To change body of generated methods, choose Tools | Templates.
+    }
      
     
 }
