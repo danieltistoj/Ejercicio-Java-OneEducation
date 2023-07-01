@@ -51,5 +51,13 @@ public class Cliente implements Autenticable{
     public boolean iniciarSesion(String clave) {
         return this.util.IniciarSesion(clave);
     }
+
+    @Override
+    public String toString() {
+        return "Cliente: "+"\n"+"Nombre: "+this.nombre
+                +"\n"+"telefono: "+this.telefono
+                +"\n"+"documento: "+this.documento;
+    }
+    
     
 }

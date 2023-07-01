@@ -19,14 +19,33 @@ public class TestArreglosReferencias {
      */
     public static void main(String[] args) {
       Cuenta  cc = new CuentaCorriente(23, 44);
-      Cuenta[] cuentas = new CuentaCorriente[5];
-      cuentas[0] = new CuentaCorriente(200, 33);
-      System.out.println(cuentas[0]);
-     
-      cuentas[1]= cc;
-      for(int i=0; i<cuentas.length;i++){
-          System.out.println("Cuenta "+i+": \n"+cuentas[i]);
+      Object[] referencias = new Object[5];
+      referencias[0] = new CuentaCorriente(200, 33);
+      System.out.println(referencias[0]);
+      
+      Cuenta ca = new CuentaAhorro(2, 0);
+      
+      referencias[3] = ca;
+      referencias[1]= cc;
+      //Cast 
+      CuentaCorriente cuenta = (CuentaCorriente) referencias[1];
+      System.out.println("Cast");
+      System.out.println(cuenta);
+      
+      Cliente cliente = new Cliente();
+      referencias[4] = cliente;
+      cliente.setNombre("Juan");
+      cliente.setDocumento("1231232");
+      cliente.setTelefono("343424"); 
+      System.out.println(cliente);
+       
+      //Cast cliente
+      Cliente cliente2 = (Cliente) referencias[4];
+      
+      for(int i=0; i<referencias.length;i++){
+          System.out.println("referencia "+i+": \n"+referencias[i]);
       }
+ 
     }
     
 }
