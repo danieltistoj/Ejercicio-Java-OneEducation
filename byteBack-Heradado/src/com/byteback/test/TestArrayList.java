@@ -21,12 +21,19 @@ public class TestArrayList {
         ArrayList<Cuenta> array = new ArrayList<>();
         Cuenta cc1 = new CuentaCorriente(11, 22);
         Cuenta cc2 = new CuentaCorriente(12,42);
+        Cuenta cc3 = new CuentaCorriente(11, 22);
         array.add(cc1);
         array.add(cc2);
         
         //System.out.println((CuentaCorriente) array.get(0));
         for(Cuenta cuenta:array){
             System.out.println(cuenta);
+        }
+        if(array.contains(cc3)){
+            System.out.println("Si, usando equal");
+        }
+        if(cc1.esIgual(cc3)){
+            System.out.println("Iguales");
         }
         
         

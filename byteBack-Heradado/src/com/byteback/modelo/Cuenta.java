@@ -100,5 +100,20 @@ public abstract class Cuenta {
         return cuenta; //To change body of generated methods, choose Tools | Templates.
     }
     
+    public boolean esIgual(Cuenta cuenta){
+        return this.agencia == cuenta.agencia 
+               && this.numero == cuenta.numero; 
+                
+    }
+
+
+    @Override
+    public boolean equals(Object obj) {
+        Cuenta cuenta = (Cuenta) obj;
+        return this.agencia == cuenta.agencia 
+               && this.numero == cuenta.numero; 
+    }
+    
+    
     
 }
