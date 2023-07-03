@@ -46,6 +46,8 @@ public class TestRespasoArray {
         System.out.println("Long");
         System.out.println(Long.MAX_VALUE);
         System.out.println(Long.MIN_VALUE);
+        int ref = Integer.valueOf("3");
+        System.out.println(ref+1);
     }
     
 }
