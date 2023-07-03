@@ -15,7 +15,7 @@ import java.util.logging.Logger;
  * @author Daniel Tistoj
  * 
  */
-public abstract class Cuenta {
+public abstract class Cuenta implements Comparable<Cuenta>{
     protected double saldo;
     private int agencia;
     private int numero;
@@ -112,6 +112,11 @@ public abstract class Cuenta {
         Cuenta cuenta = (Cuenta) obj;
         return this.agencia == cuenta.agencia 
                && this.numero == cuenta.numero; 
+    }
+
+    @Override
+    public int compareTo(Cuenta o) {
+       return Integer.compare(this.numero, o.getNumero());
     }
     
     

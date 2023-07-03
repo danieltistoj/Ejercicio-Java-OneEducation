@@ -24,6 +24,7 @@ public class TestRespasoArray {
         //Integer numeroObjeto = new Integer(40); deprecado
         Integer numeroObjeto = Integer.valueOf(40);
         List<Integer> lista = new ArrayList<Integer>();
+        //lista.sort(c);
         lista.add(numero);//autoboxing -> lsta.add(new Integer(40))
         lista.add(numeroObjeto);
         lista.add(Integer.valueOf(50));
