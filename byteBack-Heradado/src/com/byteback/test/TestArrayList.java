@@ -8,6 +8,9 @@ package com.byteback.test;
 import com.byteback.modelo.CuentaCorriente;
 import java.util.ArrayList;
 import com.byteback.modelo.*;
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
 /**
  *
  * @author Usuario
@@ -18,13 +21,13 @@ public class TestArrayList {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ArrayList<Cuenta> array = new ArrayList<>();
+        List<Cuenta> array = new  ArrayList<>();
         Cuenta cc1 = new CuentaCorriente(11, 22);
         Cuenta cc2 = new CuentaCorriente(12,42);
         Cuenta cc3 = new CuentaCorriente(11, 22);
         array.add(cc1);
         array.add(cc2);
-        
+        array.get(3);
         //System.out.println((CuentaCorriente) array.get(0));
         for(Cuenta cuenta:array){
             System.out.println(cuenta);
