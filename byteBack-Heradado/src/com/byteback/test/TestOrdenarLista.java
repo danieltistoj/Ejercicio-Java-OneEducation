@@ -55,15 +55,29 @@ public class TestOrdenarLista {
             System.out.println(cuenta);
         }
         
-        NumeroDeCuentaComparator comparator = new NumeroDeCuentaComparator();
-        lista.sort(comparator);
+        //NumeroDeCuentaComparator comparator = new NumeroDeCuentaComparator();
+        //lista.sort(comparator);
+        
+        lista.sort(new Comparator<Cuenta>(){
+            @Override
+            public int compare(Cuenta o1, Cuenta o2) {
+                return Integer.compare(o1.getNumero(), o2.getNumero());
+            }
+            
+        });
         
         System.out.println("---DESPUES DE ORDEDNAR---");
         for (Cuenta cuenta : lista) {
             System.out.println(cuenta);
         }
         System.out.println("---ORDEN ALFABETICO---");
-        lista.sort(new TitularDeCuentaComparator()); // Ya dejándolo mai delgado
+        lista.sort(new Comparator<Cuenta>(){
+            @Override
+            public int compare(Cuenta o1, Cuenta o2) {
+                return o1.getTitular().getNombre().compareTo(o2.getTitular().getNombre());
+            }
+            
+        }); // Ya dejándolo mai delgado
         for (Cuenta cuenta : lista) {
             System.out.println(cuenta + ", " + cuenta.getTitular().getNombre());
         }
